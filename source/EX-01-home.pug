@@ -1,0 +1,33 @@
+extends modules/layout/_page-default
+
+block head
+  +head('Home')
+block sidebar
+  +sidebar({})
+block main
+  .main
+    .container
+      h2 Home Content
+      .row
+        -
+          var devicesData = {
+            labels: ["Desktop", "Tablet", "Mobile"],
+            datasets: [
+              {
+                backgroundColor: ["#2C7BE5", "#A6C5F7", "#D2DDEC"],
+                data: [60, 25, 15]
+              }
+            ]
+          }
+        .col-6
+          .card
+            .card-header Devices
+            .card-body
+              .devices-chart
+                canvas.js-doughnut-chart(
+                  width="300px"
+                  height="250px"
+                  data-setdata= devicesData
+                )
+
+        

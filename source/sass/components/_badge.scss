@@ -1,0 +1,20 @@
+// ======================================================
+// Components :: Badge
+// ======================================================
+
+.badge {
+  display: inline-block;
+  padding: 2px 4px;
+  font-size: 75%;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 4px;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+  &--success {
+    color: $cl-green;
+    background-color: lighten($cl-green, 50%);
+  }
+}

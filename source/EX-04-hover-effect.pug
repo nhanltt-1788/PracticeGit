@@ -1,0 +1,244 @@
+extends modules/layout/_page-default
+
+block head
+  +head('EX-04-hover-effect')
+block sidebar
+  +sidebar({
+    currentPage: 'Effects'
+  })
+block main
+  .main
+    .container
+      h2.text-align-center Effects
+      h3.my-3 Hover use transition, transition origin, transition-delay + transform: translateY()
+      .row
+        -
+          var effect1 = [
+            {
+              image: 'images/effect-n1-1.jpg',
+              subtitle: 'Inverness',
+              title: 'McKenzie',
+              icon: 'fas fa-cloud-upload-alt'
+            },
+            {
+              image: 'images/effect-n1-2.jpg',
+              subtitle: 'Ruby',
+              title: 'Von Rails',
+              icon: 'fas fa-signal'
+            },
+            {
+              image: 'images/effect-n1-1.jpg',
+              subtitle: 'Quiche',
+              title: 'Hollandaise',
+              icon: 'fas fa-share-square'
+            }
+          ]
+        each item in effect1
+          .col-4
+            figure.effect-1
+              img.effect-1__image(src= item.image, alt="image effect")
+              figcaption.effect-1__caption
+                i.effect-1__icon(class= item.icon)
+                h6.effect-1__subtitle= item.subtitle
+                h3.effect-1__title= item.title
+              a.effect-1__link(href="#")
+      h3.my-3 Hover use Scale 
+      .row
+        -
+          var effect2 = [
+            {
+              image: 'images/effect-n2-1.png',
+              title: 'best home',
+              summary: 'This home is the best',
+              color: 'yellow'
+            },
+            {
+              image: 'images/effect-n2-2.png',
+              title: 'best picture',
+              summary: 'This home is the best',
+              color: 'green'
+            },
+            {
+              image: 'images/effect-n2-3.png',
+              title: 'best pc',
+              summary: 'This home is the best',
+              color: 'red'
+            }
+          ]
+        each item in effect2
+          .col-4
+            .effect-2(class= `bg--${item.color}`)
+              .effect-2__figure(class= `bg--${item.color}`)
+                img(src= item.image, alt="image")
+              .effect-2__content
+                h4.effect-2__title= item.title
+                p.effect-2__summary= item.summary
+      h3.my-3 Hover display bottom to top
+      .row
+        -
+          var effect3 = [
+            {
+              image: 'images/effect-n1-1.jpg',
+              title: 'Bartholemew Shoe 1',
+              desc: 'Weekends don\'t count unless you spend them doing something completely pointless.Weekends don\'t count unless you spend them doing something completely pointless.'
+            },
+            {
+              image: 'images/effect-n1-2.jpg',
+              title: 'Bartholemew Shoe 2',
+              desc: 'Weekends don\'t count unless you spend them doing something completely pointless.Weekends don\'t count unless you spend them doing something completely pointless.'
+            },
+            {
+              image: 'images/effect-n1-3.jpg',
+              title: 'Bartholemew Shoe 3',
+              desc: 'Weekends don\'t count unless you spend them doing something completely pointless.Weekends don\'t count unless you spend them doing something completely pointless.'
+            }
+          ]
+        each item in effect3
+          .col-4
+            figure.effect-3
+              img.effect-3__image(src= item.image, alt="effect 3")
+              figcaption.effect-3__caption
+                h3.effect-3__title= item.title
+                p.effect-3__desc= item.desc
+              a.effect-3__link(href="#")
+      h3.my-3 Hover image hide(rotate 90) => text show rotate 90
+      .row
+        -
+          var effect4 = [
+            {
+              image: 'images/effect-n3-1.jpg',
+              title: 'Bartholemew Shoe 1',
+              desc: 'Weekends don\'t count unless you spend them doing something completely pointless.Weekends don\'t count unless you spend them doing something completely pointless.'
+            },
+            {
+              image: 'images/effect-n3-2.jpg',
+              title: 'Bartholemew Shoe 2',
+              desc: 'Weekends don\'t count unless you spend them doing something completely pointless.Weekends don\'t count unless you spend them doing something completely pointless.'
+            },
+            {
+              image: 'images/effect-n3-3.jpg',
+              title: 'Bartholemew Shoe 3',
+              desc: 'Weekends don\'t count unless you spend them doing something completely pointless.Weekends don\'t count unless you spend them doing something completely pointless.'
+            }
+          ]
+        each item in effect4
+          .col-4
+            figure.effect-4
+              img.effect-4__image(src= item.image, alt="effect 3")
+              figcaption.effect-4__caption
+                h3.effect-4__title= item.title
+                p.effect-4__desc= item.desc
+              a.effect-4__link(href="#")
+      h3.my-3 Hover image open behide to front
+      .row
+        -
+          var effect5 = [
+            {
+              image: 'images/effect-n3-1.jpg',
+              title: 'I don\'t know which is worse',
+              desc: 'Weekends don\'t count unless you spend them doing something completely pointless'
+            },
+            {
+              image: 'images/effect-n3-2.jpg',
+              title: 'I don\'t know which is worse',
+              desc: 'Weekends don\'t count unless you spend them doing something completely pointless'
+            },
+            {
+              image: 'images/effect-n3-3.jpg',
+              title: 'I don\'t know which is worse',
+              desc: 'That everyone has his price, or that the price is always so low.'
+            }
+          ]
+        each item in effect5
+          .col-4
+            figure.effect-5
+              img.effect-5__image(src= item.image, alt="effect 5")
+              figcaption.effect-5__caption
+                h3.effect-5__title= item.title
+                p.effect-5__desc= item.desc
+              a.effect-5__link(href="#")
+      h3.my-3 Hover image open middle to behide
+      .row
+        -
+          var effect6 = [
+            {
+              image: 'images/effect-n3-1.jpg',
+              title: 'I don\'t know which is worse',
+              desc: 'Weekends don\'t count unless you spend them doing something completely pointless'
+            },
+            {
+              image: 'images/effect-n3-2.jpg',
+              title: 'I don\'t know which is worse',
+              desc: 'Weekends don\'t count unless you spend them doing something completely pointless'
+            },
+            {
+              image: 'images/effect-n3-3.jpg',
+              title: 'I don\'t know which is worse',
+              desc: 'That everyone has his price, or that the price is always so low.'
+            }
+          ]
+        each item in effect6
+          .col-4
+            figure.effect-6
+              img.effect-6__image(src= item.image, alt="effect 5")
+              figcaption.effect-6__caption
+                .column
+                  h3.effect-6__title= item.title
+                .column
+                  p.effect-6__desc= item.desc
+              a.effect-6__link(href="#")
+      h3.my-3 Hover image text slide right to left
+      .row
+        -
+          var effect7 = [
+            {
+              image: 'images/effect-n3-1.jpg',
+              title: 'I think nighttime is dark',
+              desc: 'So you can imagine your fears with less distraction.'
+            },
+            {
+              image: 'images/effect-n3-2.jpg',
+              title: 'I think nighttime is dark',
+              desc: 'So you can imagine your fears with less distraction.'
+            },
+            {
+              image: 'images/effect-n3-3.jpg',
+              title: 'I think nighttime is dark',
+              desc: 'So you can imagine your fears with less distraction.'
+            }
+          ]
+        each item in effect7
+          .col-4
+            figure.effect-7
+              img.effect-7__image(src= item.image, alt="effect 5")
+              figcaption.effect-7__caption
+                h3.effect-7__title= item.title
+                p.effect-7__desc= item.desc
+              a.effect-7__link(href="#")
+      h3.my-3 Hover image display rotate 0 -> 90deg
+      .row
+        -
+          var effect8 = [
+            {
+              image: 'images/effect-n3-1.jpg',
+              title: 'Riccardo Cavallo'
+            },
+            {
+              image: 'images/effect-n3-2.jpg',
+              title: 'Riccardo Cavallo'
+            },
+            {
+              image: 'images/effect-n3-3.jpg',
+              title: 'Riccardo Cavall'
+            }
+          ]
+        each item in effect8
+          .col-4
+            .effect-8
+              img.effect-8__image(src= item.image, alt="effect 8")
+              .effect-8__icons
+                each val, index in ['fab fa-facebook-f', 'fab fa-twitter', 'fab fa-google-plus-g']
+                  a(href="#!")
+                    i(class= val)
+              .effect-8__info
+                h3.effect-8__title= item.title

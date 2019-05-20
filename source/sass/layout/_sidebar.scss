@@ -1,0 +1,94 @@
+// ======================================================
+// Layout :: Sidebar
+// ======================================================
+.sidebar {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 250px;
+  padding-left: 24px;
+  padding-right: 24px;
+  overflow-y: auto;
+  border-right: 1px solid $cl-dark-black;
+  z-index: 1020;
+  background-color: $cl-white;
+  padding-top: 64px;
+
+  .navbar {
+    &__heading {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      font-size: $font-size-small - 2;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+  }
+
+  .navbar-nav {
+    width: 100%;
+
+    .nav-item.active {
+      & > .nav-link {
+        color: $cl-blue;
+      }
+    }
+
+    .nav-link {
+      display: flex;
+      padding: 8px 0;
+      color: $cl-black;
+      transition: color ease .3s;
+      font-weight: $font-weight-bold;
+
+      &:hover {
+        color: $cl-blue;
+      }
+    }
+
+    .nav-link[data-toggle='collapse'] {
+      &:after {
+        display: block;
+        content: '\f107';
+        font-family: $font-family-awesome;
+        margin-left: auto;
+        transition: transform .2s;
+        font-weight: 900;
+      }
+    }
+
+    .nav-link[data-toggle='collapse'][aria-expanded='true'] {
+      &:after {
+        transform: rotate(-180deg);
+      }
+    }
+
+    .nav-link i {
+      font-size: $font-size-large;
+      margin-right: 8px;
+    }
+
+    .nav .nav-link {
+      padding-left: 36px;
+    }
+
+    .nav .nav .nav-link {
+      padding-left: 48px;
+    }
+
+    .nav-sm .nav-link {
+      font-size: 12px;
+    }
+  }
+
+  @include breakpoint-down('phone') {
+    left: -250px;
+    top: 0;
+    transition: left .3s;
+
+    &.show {
+      left: 0;
+    }
+  }
+}

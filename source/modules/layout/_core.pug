@@ -1,0 +1,18 @@
+include ../page-list/_page-list
+include ../_head
+include ../_header
+include ../_footer
+include ../_button
+include ../_sidebar
+include ../menu/_menu
+
+doctype html
+html(lang='en')
+  head
+    block head
+
+  body
+    block body
+
+    block scripts
+      script(src='js/main.js')

@@ -1,0 +1,47 @@
+mixin menu(data, category, pageCurrent)
+  ul.navbar-nav.flex-column
+    each item in data
+      li.nav-item(
+        class= item.submenu ? 'submenu' : ''
+        class=(item.name === category) ? 'active' : null
+      )
+        a.nav-link(
+          href= item.submenu ? (item.href ? `#${item.href}` : 'javascript:void(0)') : (item.href ? item.href : 'javascript:void(0)')
+          data-toggle= item.submenu ? 'collapse' : null
+          role= item.submenu ? 'button' : null
+          aria-expanded= item.submenu ? 'false' : null
+          aria-controls= item.submenu ? item.href : null
+        )
+          if item.icon
+            i(class= item.icon)
+          if item.name
+            | #{item.name}
+        if item.submenu
+          .collapse(
+            id= item.href
+            data-parent="#sidebarAccordion"
+          )
+            ul.nav.nav--sm.flex-column
+              each sub in item.submenu
+                li.nav-item(
+                  class= sub.submenu ? 'submenu' : ''
+                  class= (sub.name === pageCurrent) ? 'active' : null
+                )
+                  a.nav-link(
+                    href= sub.submenu ? (sub.href ? `#${sub.href}` : 'javascript:void(0)') : (sub.href ? sub.href : 'javascript:void(0)')
+                    data-toggle= sub.submenu ? 'collapse' : null
+                    role= sub.submenu ? 'button': null
+                    aria-expanded= sub.submenu ? 'false' : null
+                    aria-controls= sub.submenu ? sub.href : null
+                  )
+                    | #{sub.name}
+                  if sub.submenu
+                    .collapse(id= sub.href)
+                      ul.nav.nav--sm.flex-column
+                        each child in sub.submenu
+                          li.nav-item(
+                            class= (child.name === pageCurrent) ? 'active' : null
+                          )
+                            a.nav-link(
+                              href= child.href ? child.href : '#'
+                            )= child.name

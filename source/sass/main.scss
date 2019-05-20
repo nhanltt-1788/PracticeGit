@@ -1,0 +1,60 @@
+// We architecting this project follow as the "7-1 Pattern" (7 folders, 1 file)
+// For more detail about this pattern
+// (https://sass-guidelin.es/#the-7-1-pattern)
+
+// Font fallback for Windows, Linux
+
+// 1. Vendors
+// ----------
+// https://getbootstrap.com/docs/4.0/getting-started/theming/#sass
+// Need vendors go first because we inherit all of sass files of Bootstrap 4
+@import 'bootstrap/scss/bootstrap-grid';
+@import 'bootstrap/scss/bootstrap-reboot';
+@import 'bootstrap/scss/bootstrap';
+
+@import 'extentions/Chart';
+
+// 2. Abstracts
+// ------------
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+
+@import '@fortawesome/fontawesome-free/scss/brands';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+
+// 3. Vendor
+// -------
+@import 'vendor/chart-custom';
+// 3. Base
+// -------
+@import 'base/global';
+@import 'base/typography';
+@import 'base/colors';
+@import 'base/images';
+@import 'base/fonts';
+@import 'base/background-color';
+
+// 4. Layout
+// ---------
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sidebar';
+
+// 5. Components
+// -------------
+@import 'components/table';
+@import 'components/button';
+@import 'components/badge';
+
+// 6. Pages
+// --------
+@import 'pages/home';
+@import 'pages/EX-04-hover-effect';
+
+
+// 7. Themes
+// ---------
+// We just have only 1 theme in this project
