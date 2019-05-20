@@ -1,0 +1,51 @@
+// ======================================================
+// Abstracts :: Variables
+// ======================================================
+
+// Paths
+$path-image: '../images';
+$path-fonts: '../fonts';
+
+// Fonts
+// >> Font-family
+$font-family-base : 'Open Sans', 'sans-serif';
+$font-family-awesome : 'Font Awesome 5 Free';
+// >> Font-size
+$cl-gray          : #6e84a3;
+
+$cl-dark-black    : #000;
+$cl-black         : #12263f;
+$cl-light-black   : #14141f;
+
+$cl-green         : #00d97e;
+
+$cl-blue          : #346cb0;
+
+$cl-white         : #fff;
+
+$cl-red           : #e74c3c;
+
+$cl-yellow        : #f8b334;
+
+// >> Font-size
+$font-size-small  : 12px;
+$font-size-base   : 14px;
+$font-size-medium : 16px;
+$font-size-large  : 18px;
+// >> Font-weight
+$font-weight-light: 300;
+$font-weight-base : 400;
+$font-weight-bold : 600;
+
+// Borders
+$border-radius-small : 2px;
+$border-radius-base  : 4px;
+$border-radius-medium: 8px;
+
+// z-index
+$z-indexes: (
+  base    : 1,
+  under   : -1,
+  modal   : 1001,
+  sidebar : 1000
+);

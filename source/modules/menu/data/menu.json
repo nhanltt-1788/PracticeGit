@@ -1,0 +1,254 @@
+{
+  "menu": {
+    "data": [
+      {
+        "name": "Dashboards",
+        "icon": "fa fa-home",
+        "href": "sidbarDashboards",
+        "submenu": [
+          {
+            "name": "Default",
+            "href": "#"
+          },
+          {
+            "name": "Alternative",
+            "href": "EX-03-alternative.html",
+            "badge": {
+              "content": "New",
+              "type": "success"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Pages",
+        "icon": "fa fa-home",
+        "href": "sidbarPages",
+        "submenu": [
+          {
+            "name": "Profile",
+            "href": "sidbarProfile",
+            "submenu": [
+              {
+                "name": "Posts",
+                "href": "#"
+              },
+              {
+                "name": "Groups",
+                "href": "#"
+              },
+              {
+                "name": "Projects",
+                "href": "#"
+              },
+              {
+                "name": "Files",
+                "href": "#"
+              },
+              {
+                "name": "Subscribers",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "name": "Project",
+            "href": "sidbarProject",
+            "submenu": [
+              {
+                "name": "Overview",
+                "href": "#"
+              },
+              {
+                "name": "Files",
+                "href": "#"
+              },
+              {
+                "name": "Reports",
+                "href": "#"
+              },
+              {
+                "name": "New project",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "name": "Team",
+            "href": "sidbarTeam",
+            "submenu": [
+              {
+                "name": "Overview",
+                "href": "#"
+              },
+              {
+                "name": "Projects",
+                "href": "#"
+              },
+              {
+                "name": "Members",
+                "href": "#"
+              },
+              {
+                "name": "New team",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "name": "Orders",
+            "href": "#"
+          },
+          {
+            "name": "Feed",
+            "href": "#"
+          },
+          {
+            "name": "Settings",
+            "href": "#"
+          },
+          {
+            "name": "Invoice",
+            "href": "#"
+          },
+          {
+            "name": "Pricing",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "name": "Authentication",
+        "icon": "fa fa-home",
+        "href": "sidbarAuthentication",
+        "submenu": [
+          {
+            "name": "Sign in",
+            "href": "sidbarSignin",
+            "submenu": [
+              {
+                "name": "Cover",
+                "href": "#"
+              },
+              {
+                "name": "Illustration",
+                "href": "#"
+              },
+              {
+                "name": "Basic",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "name": "Sign up",
+            "href": "sidbarSignup",
+            "submenu": [
+              {
+                "name": "Cover",
+                "href": "#"
+              },
+              {
+                "name": "Illustration",
+                "href": "#"
+              },
+              {
+                "name": "Basic",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "name": "Password reset",
+            "href": "sidbarPassword",
+            "submenu": [
+              {
+                "name": "Cover",
+                "href": "#"
+              },
+              {
+                "name": "Illustration",
+                "href": "#"
+              },
+              {
+                "name": "Basic",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "name": "Error",
+            "href": "sidbarError",
+            "submenu": [
+              {
+                "name": "Cover",
+                "href": "#"
+              },
+              {
+                "name": "Illustration",
+                "href": "#"
+              },
+              {
+                "name": "Basic",
+                "href": "#"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "menu2": {
+    "data": [
+      {
+        "name": "Effects",
+        "icon": "fa fa-home",
+        "href": "EX-04-hover-effect.html"
+      },
+      {
+        "name": "Components",
+        "icon": "fa fa-home",
+        "href": "sidbarComponents",
+        "submenu": [
+          {
+            "name": "Alerts",
+            "href": "#"
+          },
+          {
+            "name": "Avatars",
+            "href": "#"
+          },
+          {
+            "name": "Badges",
+            "href": "#"
+          },
+          {
+            "name": "Breadcrumb",
+            "href": "#"
+          },
+          {
+            "name": "Buttons",
+            "href": "#"
+          },
+          {
+            "name": "Button group",
+            "href": "#"
+          },
+          {
+            "name": "Cards",
+            "href": "#"
+          },
+          {
+            "name": "Chart",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "name": "Change log",
+        "icon": "fa fa-home",
+        "href": "#"
+      }
+    ]
+  }
+}

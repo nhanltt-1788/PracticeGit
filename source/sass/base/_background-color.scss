@@ -1,0 +1,16 @@
+// ======================================================
+// Base :: Background color
+// ======================================================
+.bg {
+  &--red {
+    background-color: $cl-red;
+  }
+
+  &--green {
+    background-color: $cl-green;
+  }
+
+  &--yellow {
+    background-color: $cl-yellow;
+  }
+}

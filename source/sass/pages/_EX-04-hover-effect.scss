@@ -1,0 +1,486 @@
+.effect-1 {
+  $effect: &;
+
+  position: relative;
+  overflow: hidden;
+  color: $cl-dark-black;
+  text-align: center;
+  perspective: 50em;
+
+  &:after {
+    background-color: $cl-white;
+    position: absolute;
+    content: '';
+    display: block;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    transition: all .4s ease-in-out;
+    transform-origin: 50% 50%;
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+
+  &:hover {
+    &:after {
+      transform: rotateX(0);
+      opacity: .9;
+    }
+
+    #{$effect}__caption {
+      transform: translateY(-50%);
+      opacity: 1;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+  }
+
+  &__link {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    right: 20px;
+    opacity: 0;
+    z-index: 1;
+    transition: all .2s;
+    transition-delay: .2s;
+  }
+
+  &__icon {
+    font-size: $font-size-large + 14;
+  }
+}
+
+.effect-2 {
+  $effect2: &;
+
+  width: 200px;
+  height: 200px;
+  position: relative;
+
+  &:hover {
+    #{$effect2}__figure {
+      transform: scale(.4);
+    }
+  }
+
+  &__figure {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+    left: 0;
+    transition: all 200ms ease-in;
+    transform-origin: 50% 20%;
+    transform: scale(1);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    z-index: 1;
+    color: $cl-white;
+    width: 180px;
+  }
+
+  &__title {
+    color: rgba($cl-green, .7);
+  }
+}
+
+.effect-3 {
+  $effect3: &;
+
+  position: relative;
+  transition: all .35s ease;
+  border: 1px solid #000;
+  overflow: hidden;
+
+  &__image {
+    max-width: 100%;
+  }
+
+  &__caption {
+    position: absolute;
+    top: 83%;
+    width: 100%;
+    padding: 15px;
+    background-color: #fff;
+    transition: all .35s ease;
+
+    &:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: 100%;
+      width: 100%;
+      height: 80px;
+      background-image: linear-gradient(to bottom, transparent 0%, #fff 100%);
+      z-index: 2;
+    }
+  }
+
+  &:hover {
+    #{$effect3}__caption {
+      top: 52%;
+    }
+  }
+}
+
+.effect-4 {
+  $effect4: &;
+
+  position: relative;
+  overflow: hidden;
+  perspective: 50rem;
+  color: #fff;
+  background-color: #000;
+  transition: all .35s ease;
+
+  &__image {
+    max-width: 100%;
+    opacity: 1;
+    transition: all .6s ease;
+    transform-origin: 50% 100%;
+  }
+
+  &__caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    transform-origin: 50% -50%;
+    z-index: 1;
+    opacity: 0;
+    transform: rotateX(-90deg);
+    transition: all .5s ease;
+  }
+
+  &:hover {
+    #{$effect4}__image {
+      transform: rotateX(90deg);
+      opacity: 0;
+    }
+
+    #{$effect4}__caption {
+      transform: rotateX(0);
+      opacity: 1;
+      transition-delay: .3s;
+    }
+  }
+}
+
+.effect-5 {
+  $effect5: &;
+
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+
+  &__image {
+    max-width: 100%;
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    right: 30px;
+    transform: translate(0, -50%);
+  }
+
+  &__title {
+    text-transform: uppercase;
+    transform: translateY(50%);
+    transition: all .4s;
+    transition-delay: .5s;
+    opacity: 0;
+  }
+
+  &__desc {
+    opacity: 0;
+    transition: all .3s;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 30px;
+    right: 30px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    opacity: 0;
+    background-color: #fff;
+    transition: all .4s ease;
+    transition-delay: .8s;
+  }
+
+  &:hover {
+    &:before {
+      top: 30px;
+      bottom: 30px;
+      transition-delay: 0s;
+      opacity: 1;
+      background: rgba(255, 255, 255, 0);
+    }
+
+    #{$effect5}__title {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    #{$effect5}__desc {
+      opacity: 1;
+      transition-delay: 1s;
+    }
+  }
+}
+
+.effect-6 {
+  $effect6: &;
+
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+
+  &__caption {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .column {
+    flex-grow: 1;
+    flex-basis: 0;
+    position: relative;
+    overflow: hidden;
+
+    &:first-of-type {
+      text-transform: uppercase;
+      text-align: right;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 25px;
+    margin-bottom: 0;
+    background: rgba(0, 0, 0, .5);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all .6s;
+  }
+
+  &__desc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 25px;
+    margin-bottom: 0;
+    color: #000;
+    background: #fff;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all .6s;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    width: 2px;
+    opacity: 0;
+    background: rgba(0, 0, 0, .5);
+    transition: all .3s;
+    transition-delay: .5s;
+  }
+
+  &:hover {
+    &:before {
+      top: 0;
+      bottom: 0;
+      background-color: #fff;
+      opacity: 1;
+      transition-delay: 0s;
+    }
+
+    #{$effect6}__title {
+      opacity: 1;
+      transform: translateX(0);
+      transition-delay: .3s;
+    }
+
+    #{$effect6}__desc {
+      opacity: 1;
+      transform: translateX(0);
+      transition-delay: .3s;
+    }
+  }
+}
+
+.effect-7 {
+  $effect7: &;
+
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+
+  &__caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px 70px;
+  }
+
+  &__title {
+    transform: translateX(100px);
+    opacity: 0;
+    transition: all .6s;
+    transition-delay: .6s;
+  }
+
+  &__desc {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all .6s;
+    transition-delay: 0s;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    right: 30px;
+    left: 100%;
+    opacity: 0;
+    border-left: 4px solid rgba(255, 255, 255, .8);
+    background-color: #fff;
+    transition: all .6s;
+    transition-delay: 1s;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+      left: 40px;
+      background-color: rgba(255, 255, 255, 0);
+      transition-delay: 0s;
+    }
+
+    #{$effect7}__title {
+      opacity: 1;
+      transform: translateX(0);
+      transition-delay: .4s;
+    }
+
+    #{$effect7}__desc {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: .6s;
+    }
+  }
+}
+
+.effect-8 {
+  $effect8: &;
+
+  position: relative;
+  perspective: 50rem;
+  &__image {
+    max-width: 100%;
+  }
+
+  &__icons {
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 15px;
+    transform: rotateY(90deg);
+    transform-origin: left center 0;
+    transition: all 350ms ease;
+
+    a {
+      width: 50px;
+      height: 50px;
+      background-color: #fff;
+      color: blue;
+      text-align: center;
+      line-height: 50px;
+
+      &:not(:last-of-type) {
+        margin-bottom: 1px;
+      }
+    }
+  }
+
+  &__info {
+    opacity: 0;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    background-color: #fff;
+    text-align: center;
+    transform: rotateX(90deg);
+    transition: all .4s;
+    transform-origin: center bottom;
+
+    h3 {
+      margin-bottom: 0;
+    }
+  }
+
+  &:hover {
+    #{$effect8}__icons {
+      opacity: 1;
+      left: 15px;
+      transform: rotateY(0deg);
+    }
+
+    #{$effect8}__info {
+      transform: rotateY(0);
+      opacity: 1;
+    }
+  }
+}

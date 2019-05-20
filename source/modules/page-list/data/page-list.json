@@ -1,0 +1,26 @@
+{
+  "pageList": {
+    "data": [{
+      "title": "Style Guides",
+      "url": "styleguides",
+      "categories": "N/A",
+      "background": "gray"
+      }, {
+        "title": "Home",
+        "url": "EX-01-home",
+        "categories": "Home",
+        "background": "#1984c6"
+      },{
+        "title": "Alternative",
+        "url": "EX-03-alternative",
+        "categories": "Dashboards",
+        "background": "#e8990f"
+      },{
+        "title": "Effects",
+        "url": "EX-04-hover-effect",
+        "categories": "Effect",
+        "background": "#32CD32"
+      }
+    ]
+  }
+}

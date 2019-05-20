@@ -1,0 +1,6 @@
+mixin sidebar({category, currentPage})
+  nav.navbar.flex-column.sidebar.js-sidebar-collapse(id="sidebarAccordion")
+    .navbar__container
+      +menu(menu.data, category, currentPage)
+      h3.navbar__heading Documentation
+      +menu(menu2.data, category, currentPage)

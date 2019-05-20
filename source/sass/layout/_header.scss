@@ -1,0 +1,80 @@
+// ======================================================
+// Layout :: Header
+// ======================================================
+// Start classname with prefix `l-`
+
+.l-header {
+  color: green;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 56px;
+  z-index: 1030;
+  box-shadow: 0 0 0 1px rgba($cl-light-black, .05), 0 1px 3px 0 rgba($cl-light-black, .15);
+  background-color: $cl-blue;
+  color: hsla(0, 0, 100, .8);
+  padding: 8px 16px;
+}
+
+.logo {
+  width: 15rem;
+  font-size: $font-size-large + 4;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: auto;
+      height: 32px;
+    }
+  }
+}
+.navbar-toggler {
+  padding: 0 4px;
+  background-color: $cl-white;
+  margin-right: 8px;
+
+  &:focus {
+    box-shadow: 0;
+    outline: 0;
+  }
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+.user {
+  .btn {
+    padding: 0;
+  }
+
+  .dropdown-toggle {
+    &:after {
+      content: none;
+    }
+  }
+
+  &__avatar {
+    display: block;
+    width: 36px;
+    height: 36px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+}
