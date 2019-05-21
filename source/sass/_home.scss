@@ -1,0 +1,19 @@
+// ======================================================
+// Pages :: Home
+// ======================================================
+// Start classname with prefix `p-`
+
+body {
+  // https://github.com/borodean/postcss-assets#url-resolution
+}
+.main {
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  margin-top: 56px;
+  padding: 16px;
+
+  @include breakpoint-down('phone') {
+    width: 100%;
+    margin-left: 0;
+  }
+}
